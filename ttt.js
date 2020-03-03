@@ -23,8 +23,8 @@ function draw() {
 }
 
 function mouseClicked() {
-    if (mouseX < width/3) {
-        if (mouseY < height/3) {
+    if (mouseX < width/3 && mouseX > 0) {
+        if (mouseY < height/3 && mouseY > 0) {
             if (occupied.indexOf(1) == -1) {
                 currentCell = 1;
 
@@ -52,7 +52,7 @@ function mouseClicked() {
 
                 occupied.push(currentCell);
             }
-        } else if (mouseY > height/3*2) {
+        } else if (mouseY > height/3*2 && mouseY < height) {
             if (occupied.indexOf(7) == -1) {
                 currentCell = 7;
 
@@ -96,7 +96,7 @@ function mouseClicked() {
 
                 occupied.push(currentCell);
             }
-        } else if (mouseY > height/3*2) {
+        } else if (mouseY > height/3*2 && mouseY < height) {
             if (occupied.indexOf(8) == -1) {
                 currentCell = 8;
 
@@ -111,8 +111,8 @@ function mouseClicked() {
                 occupied.push(currentCell);
             }
         }
-    } else if (mouseX > width/3*2) {
-        if (mouseY < height/3) {
+    } else if (mouseX > width/3*2 && mouseX < width) {
+        if (mouseY < height/3 && mouseY > 0) {
             if (occupied.indexOf(3) == -1) {
                 currentCell = 3;
 
@@ -140,7 +140,7 @@ function mouseClicked() {
 
                 occupied.push(currentCell);
             }
-        } else if (mouseY > height/3*2) {
+        } else if (mouseY > height/3*2 && mouseY < height) {
             if (occupied.indexOf(9) == -1) {
                 currentCell = 9;
 
